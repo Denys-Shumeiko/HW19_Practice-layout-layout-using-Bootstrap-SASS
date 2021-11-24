@@ -1,218 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- bootstrap start -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<!-- bootstrap end -->
-	<link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/flex.css">
-    <link rel="stylesheet" href="./css/style.css">
-	<link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <title>Shumeiko Denys</title>
+	<link rel="stylesheet" href="./css/style.scss">
+	<link rel="stylesheet" href="./css/flex.css">
+ 	<link rel="stylesheet" href="./css/style.css">
+	 <title>Smart Agency Landing Page</title>
 </head>
 <body>
-	<div class="wrap">
-		<!-- HEADER  -->
-		<header class="header">
-			<div class="header-line fx-jc-sb">
-				<a class="header-logo " href="#"><span>S</span>mart</a>
-				<a href="#" class="header-burger">
-					<img src="./assets/img/Burger.png" alt="">
-				</a>
-			</div>
-			<div class="header-title col-lg-8 offset-lg-2">
-				<h2><span>Smart</span> Agency Landing Page</h2>
-			</div>
-			<div class="header-subtitle col-lg-4">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolores eligendi quidem odio veritatis similique, aperiam quas sequi necessitatibus ex cum, soluta quod. Accusantium nostrum dolor expedita nemo aliquid, autem qui quidem explicabo doloremque maiores fuga laudantium dignissimos eum magni, repellat ducimus blanditiis ab a. Cumque numquam voluptas accusantium eum?</p>
-			</div>
-			<div class="header-info">
-				<div class="header-info-name fx-jc-c">
-					<h4><span>Send</span> A Message</h4>
+	<div class="site-wrap">
+	<header class="main">
+		<div class="container">
+			<div class="row main-head">
+				<div class="col-6 main-head-logo">
+					<div class="main-head-logo-border">
+						<p><span id="color-logo">S</span>mart</p>
+					</div>
 				</div>
-				<div class="form-floating mb-3 fx-jc-c">
-					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Your Name</label>
+				<div class="col-6 main-head-nav d-flex justify-content-end align-items-center">
+					<div class="hamburger-menu"></div>
 				</div>
-				<div class="form-floating mb-3 fx-jc-c">
-					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Your Email</label>
-				</div>
-				<div class="form-floating fx-jc-c">
-					<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-					<label for="floatingTextarea2">Your Messages</label>
-				  </div>
-				<button class="header-send"><span>Send Message</span></button>
 			</div>
-		</header>
-		<!-- section1 -->
-		<section class="section1">
-			<div class="block-section1">
-				<div class="section1-title">
+			<div class="row">
+				<div class="col-12">
+					<div class="main-text">
+						<h1><span>Smart</span> Agency Landing Page</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni <br> quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates <br>doloremque rerum 
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-4 
+				col-sm-6 col-sm-offset-3 col-xs-12">
+					<div class="main-form">
+						<p class="main-form-header"><span>Send</span> A Message</p>
+						<form id="main-form-ajax" action="#">
+							<input type="hidden" name="main_form" value="Главная форма">
+							<input id="username" name="username" type="text" placeholder="Your Name">
+							<input name="email" type="text"  placeholder="Your Email">
+							<textarea name="user_message" rows="5" placeholder="Your Message"></textarea>
+							<button id="submit-form" class="main-form-btn" type="submit">Send Message <span>&rarr;</span> </button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="process">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12 section-header text-center">
 					<h2><span>Working</span> Process</h2>
-				</div>
-				<div class="section1-subtitle">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, vel! Assumenda aperiam corporis fuga. Delectus.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam corrupti recusandae, quod dicta.</p>
 				</div>
 			</div>
-			<div class="block1-section1 row justify-content-between">
-				<div class="conteiner1">
-					<div class="conteiner1-foto"></div>
-					<h4>Koc Koi Tomi</h4>
-					<p>Lorem ipsum is dummy lorem very dumy</p>
-					<button type="button" class="btn btn-primary btn-lg">Know more</button>
-				</div>
-				<div class="conteiner1 second">
-					<div class="conteiner1-foto second-foto"></div>
-					<h4>Koimona Set</h4>
-					<p>Lorem ipsum is dummy you lorem very dumy is</p>
-					<button type="button" class="btn btn-primary btn-lg">Know more</button>
-				</div>
-				<div class="conteiner1 third">
-					<div class="conteiner1-foto third-foto"></div>
-					<h4>Setting Koire</h4>
-					<p>Lorem ipsum is dummy you lorem very Lorem ipsus</p>
-					<button type="button" class="btn btn-primary btn-lg">Know more</button>
-				</div>
-				<div class="conteiner1 fourth">
-					<div class="conteiner1-foto fourth-foto"></div>
-					<h4>Ko Image Lara</h4>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-					<button type="button" class="btn btn-primary btn-lg">Know more</button>
-				</div>
-			</div>
-		</section>
-		<!-- section 2 -->
-		<section class="section2">
-			<div class="block-section2">
-				<div class="section2-title">
-					<h2><span>Featured</span> Works</h2>
-				</div>
-				<div class="section2-subtitle">
-					<p>Lorem ipsum dolor sit amet consecteur adip sicing elit Malores fuga provident Libero.</p>
-				</div>
-			</div>
-			<div class="section2-conteiner row justify-content-between">
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-				<div class="block-orange col-lg-4"></div>
-			</div>
-		</section>
-		<!-- section 3 -->
-		<section class="section3">
-			<div class="block-section3">
-				<div class="section3-title">
-					<h2><span>Featured</span> Works</h2>
-				</div>
-				<div class="section3-subtitle">
-					<p>Lorem ipsum dolor sit amet consecteur adip sicing elit Malores fuga provident Libero.</p>
-				</div>
-			</div>
-			<div class="block2-section3 fx-jc-sb">
-				<div class="block2-section3-left fx-column">
-					<div class="section3-foto fx-sb-c">
-						<img src="./assets/img/ls6b.png" alt="">
-					</div>
-					<div class="section3-foto fx-sb-c">
-						<img src="./assets/img/ls4b.png" alt="">
-					</div>
-					<div class="section3-foto fx-sb-c">
-						<img src="./assets/img/ls3b.png" alt="">
-					</div>
-					<div class="section3-foto fx-sb-c">
-						<img src="./assets/img/ls6b.png" alt="">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="process-box box-tomi">
+						<!-- <div class="fas fa-magnet"></div> -->
+						<img src="./img/magn.png" alt="">
+						<h4>Koc Koi Tomi</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<button class="process-box-btn"><span class="plus"></span>Know More</button>
 					</div>
 				</div>
-				<div class="section3-text fx-column">
-					<h5>Modern App Design</h5>
-					<div class="line"></div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates modi voluptate harum libero quam? Similique quasi consequuntur voluptatem numquam illo aspernatur perferendis nesciunt magnam minima perspiciatis eveniet ducimus, porro quos? Iusto est tempora iste, ad blanditiis facilis atque ipsum!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aliquam ipsa possimus optio molestias natus, pariatur maxime itaque omnis.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, similique.</p>
-					<button type="button" class="btn btn-primary btn-lg">Know more</button>
-				</div>
-				<div class="section3-right-foto">
-				</div>
-			</div>
-		</section>
-		<!-- section 4 -->
-		<section class="section4">
-			<div class="block-section4">
-				<div class="section4-title">
-					<h2><span>Featured</span> Works</h2>
-				</div>
-				<div class="section4-subtitle">
-					<p>Lorem ipsum dolor sit amet consecteur adip sicing elit Malores fuga provident Libero.</p>
-				</div>
-			</div>
-			<div class="block2-section4 row justify-content-between">
-				<div class="block-orange col-lg-1">
-					<div class="orange-name">
-						<h4>Bedi Manos</h4>
-						<p>UI/UX Parena</p>
+				<div class="col-lg-3 col-md-3 col-sm-6">					
+					<div class="process-box box-koimona">
+						<img src="./img/gek.png" alt="">
+						<h4>Koimona Set</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<button class="process-box-btn"><span class="plus"></span>Know More</button>
 					</div>
 				</div>
-				<div class="block-orange col-lg-1 mid">
-					<div class="metka">
-						<h5>UI/UX Design</h5>
-						<div class="progress">
-							<div class="progress-bar style" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+				<div class="col-lg-3 col-md-3 col-sm-6">					
+					<div class="process-box box-koire">
+						<img src="./img/mech.png" alt="">
+						<h4>Setting Koire</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<button class="process-box-btn"><span class="plus"></span>Know More</button>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">					
+					<div class="process-box box-lara">
+						<img src="./img/camera.png" alt="">
+						<h4>Ko Image Lara</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<button class="process-box-btn"><span class="plus"></span>Know More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12 section-header text-center">
+					<h2><span>Featured </span>Works</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/1.jpg" alt="">	
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6" >
+					<div class="works-box">
+						<img src="img/works/2.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/3.jpg" alt="">						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/4.jpg" alt="">						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/5.jpg" alt="">						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/6.jpg" alt="">						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/7.jpg" alt="">						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/8.jpg" alt="">						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="works-box">
+						<img src="img/works/9.jpg" alt="">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 section-header text-center">
+					<h2><span>Services</span> We Provide</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-12">
+					<ul class="nav nav-tabs" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link" href="#navtab1" role="tab" data-toggle="tab">
+					    	<img src="img/services/1.png" alt="">
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#navtab2" role="tab" data-toggle="tab">
+							<img src="img/services/2.png" alt="">
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#navtab3" role="tab" data-toggle="tab">
+					   		<img src="img/services/3.png" alt="">
+						</a>
+					  </li>
+					    <li class="nav-item">
+					    <a class="nav-link" href="#navtab4" role="tab" data-toggle="tab">
+					    	<img src="img/services/1.png" alt="">
+					    </a>
+					  </li>
+					</ul>
+				</div>
+				<div class="col-lg-10 col-md-10 col-12">
+					<div class="tab-content tabContent">						
+					  	<div class="row">
+					  		<div class="col-12 col-md-7 col-lg-7">
+					  			<h4>Modern App Design #1</h4>
+					  			<span></span>
+					  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum totam ad sint error porro. Consectetur, sunt, aperiam. Magni rem optio distinctio illum consequuntur delectus nulla illo aperiam itaque cumque. <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia vitae eveniet quam rem unde facilis.
+					  			<br><br>
+					  			Vel officia vitae eveniet quam rem unde facilis.
+					  			</p>
+					  			<button class="KnowMore hover-orange">+ Know More
+					  			</button>
+					  		</div>
+					  		<div class="col-12 col-md-5 col-lg-5">
+					  			<img class="img-resposive" src="img/apple-watch-mockup.png" alt="watch">
+					  		</div>
+					  	</div>										 	
+					</div>
+				</div>
+			</div>
+	</div>
+	</section>
+	<section id="team-people">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12 section-header text-center">
+					<h2><span>Team</span> Chinen & Skills</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
+				</div>
+			</div>
+			<div class="row team-container d-flex justify-content-center justify-content-xl-between justify-content-sm-around">
+					<div class="team-box" >
+						<div class="photo" id="teamBox1">
+							<div class="skills">
+							</div>
+						</div>
+						<div class="team-name mx-auto">
+							<p><span>Bedi Manos</span><br>UI/UX Parena</p>
 						</div>
 					</div>
-					<div class="metka">
-						<h5>English</h5>
-						<div class="progress">
-							<div class="progress-bar style" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="team-box" >
+						<div class="photo" id="teamBox2">
+							<div class="skills">
+								<div class="skills-skill">
+									<p>UI/UX  Design</p>
+								</div>
+								<div class="progress">
+									<div style="width: 75%;" class="progress-left"></div>
+								</div>
+								<div class="skills-skill">
+									<p>English</p>
+								</div>
+								<div class="progress">
+									<div style="width: 80%;"  class="progress-left"></div>
+								</div>
+								<div class="skills-skill">
+									<p>Communication</p>
+								</div>
+								<div class="progress">
+									<div style="width: 77%;"  class="progress-left"></div>
+								</div>
+							</div>
+						</div>
+						<div class="team-name mx-auto">
+							<p><span>Ali Sayed</span><br>UI/UX Parena</p>
 						</div>
 					</div>
-					<div class="metka">
-						<h5>Communication</h5>
-						<div class="progress">
-							<div class="progress-bar style" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="team-box" >
+						<div class="photo" id="teamBox3">
+							<div class="skills">
+							</div>
+						</div>
+						<div class="team-name mx-auto">
+							<p><span>Howard Smith</span><br>UI/UX Parena</p>
 						</div>
 					</div>
-					<div class="name-info">
-						<h5>Ali Sayed</h5>
-						<a href="#">UI/UX Designer</a>
-						<nav>
-							<ul class="menu fx-jc-sb">
-								<li><a href="#"> <img src="./assets/img/twitter.png" alt=""> </a></li>
-								<li><a href="#"> <img src="./assets/img/U.png" alt=""> </a></li>
-								<li><a href="#"> <img src="./assets/img/Facebook.png" alt=""> </a></li>
-							</ul>
-						</nav>
-					</div>			
 				</div>
-				<div class="block-orange col-lg-4">
-					<div class="orange-name">
-						<h4>Ali Sayed</h4>
-						<p>UI/UX Designer</p>
-					</div>			
-				</div>
-			</div>
-		</section>
-		<!-- section 5 -->
-		<section class="section4">
-			<div class="block-section4">
-				<div class="section4-title">
+	</section>
+	<section id="feedback">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12 section-header text-center">
 					<h2><span>Clients</span> Said</h2>
-				</div>
-				<div class="section4-subtitle">
-					<p>Lorem ipsum dolor sit amet consecteur adip sicing elit Malores fuga provident Libero.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
 				</div>
 			</div>
+			<div class="clients-said__carousel">
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 					  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -221,86 +291,86 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="section5-text">
+							<div class="clients-said__review fx-jc-sb">
 								<div>
 									<div class="circle"></div>
 									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
 									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
 									</ul>
-									<p><span>Kita Say,</span> HK Director</p>
+									<p class="clients-said__name"><span>Kita Say,</span> HK Director</p>
 								</div>
 								<div>
-									<div class="circle"></div>
+									<div class="circle sas"></div>
 									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
 									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
 									</ul>
-									<p><span>Al Rayhan,</span> UX Director</p>
-								</div>
-							</div>
-						  </div>
-						  <div class="carousel-item">
-							<div class="section5-text">
-								<div>
-									<div class="circle"></div>
-									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
-									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-									</ul>
-									<p><span>Kita Say,</span> HK Director</p>
-								</div>
-								<div>
-									<div class="circle"></div>
-									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
-									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-									</ul>
-									<p><span>Al Rayhan,</span> UX Director</p>
+									<p class="clients-said__name"><span>Al Rayhan,</span> UX Director</p>
 								</div>
 							</div>
 						  </div>
 						  <div class="carousel-item">
-							<div class="section5-text">
+							<div class="clients-said__review fx-jc-sb">
 								<div>
 									<div class="circle"></div>
 									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
 									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
 									</ul>
-									<p><span>Kita Say,</span> HK Director</p>
+									<p class="clients-said__name"><span>Kita Say,</span> HK Director</p>
 								</div>
 								<div>
+									<div class="circle sas"></div>
+									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+									<ul>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+									</ul>
+									<p class="clients-said__name"><span>Al Rayhan,</span> UX Director</p>
+								</div>
+							</div>
+						  </div>
+						  <div class="carousel-item">
+							<div class="clients-said__review fx-jc-sb">
+								<div>
 									<div class="circle"></div>
 									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
 									<ul>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
-										<li><img src="./assets/img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
 									</ul>
-									<p><span>Al Rayhan,</span> UX Director</p>
+									<p class="clients-said__name"><span>Kita Say,</span> HK Director</p>
+								</div>
+								<div>
+									<div class="circle sas"></div>
+									<p>“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again”</p>
+									<ul>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+										<li><img src="./img/star.png" alt=""></li>
+									</ul>
+									<p class="clients-said__name"><span>Al Rayhan,</span> UX Director</p>
 								</div>
 							</div>
 						  </div>
@@ -311,33 +381,44 @@
 					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 						<div></div>
 					</button>
-				 </div>
-		</section>
-		<!-- section 7 -->
-		<section class="section7">
-			<ul class="fx-c">
-				<li><a href="#"> <img src="./assets/img/Linkein.png" alt=""> </a></li>
-				<li><a href="#"> <img src="./assets/img/envato.png" alt=""> </a></li>
-				<li><a href="#"> <img src="./assets/img/drible.png" alt=""> </a></li>
-				<li><a href="#"> <img src="./assets/img/Linkein.png" alt=""> </a></li>
-				<li><a href="#"> <img src="./assets/img/envato.png" alt=""> </a></li>
-				<li><a href="#"> <img src="./assets/img/drible.png" alt=""> </a></li>
-			</ul>
-		</section>
-		<!-- footer -->
-		<footer class="footer">	
-			<a class="footer-butt" href="#">Contact Us</a>
-				<div class="footer-logo fx-sb-c">
-					<ul>
-						<li><a href=""><img src="./assets/img/face.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/img/tw foot.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/img/ball.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/img/Be.png" alt=""></a></li>
-					</ul>
-					<p>© 2020 - 2021 Deviserweb Ltd.</p>
 				</div>
-		</footer>		
-	</div>
-
+			</div>
+		</div>
+	</section>	
+	<div class="parthners">
+		<div class="container">
+			<div class="row col-12">
+				<ul>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+					<li><a href="#"><img src="./img/linkedin.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- parthners -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-xs-12 text-center">
+					<button class="contact hover-orange">Contact Us</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="footer__contacts fx-sb-c">
+					<ul class="flex">
+						<li><a href=""><img src="./img/footer-be.png" alt=""></a></li>
+						<li><a href=""><img src="./img/footer-fb.png" alt=""></a></li>
+						<li><a href=""><img src="./img//footer_boll.png" alt=""></a></li>
+						<li><a href=""><img src="./img/footer_tw.png" alt=""></a></li>
+					</ul>
+					<p>© 2015 - 2016 Deviserweb Ltd.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
 </body>
 </html>

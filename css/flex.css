@@ -1,3 +1,6 @@
+.flex {
+    display: flex;
+}
 .fx-jc-c{
     display: flex;
     justify-content: center;
@@ -40,8 +43,3 @@
     display: flex;
     justify-content: flex-start;
 }
-.fx-ai-c {
-    display: flex;
-    align-items: center;
-}
-
